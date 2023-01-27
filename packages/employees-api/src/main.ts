@@ -2,10 +2,10 @@ import express from 'express';
 import { Request, Response } from "express";
 const cors = require('cors');
 const port = process.env.PORT ? Number(process.env.PORT) : 3001;
-import EMPLOYEES from '@org-react-node/employees';
+import { EMPLOYEES } from '@org-react-node/shared-utils';
 const app = express();
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send({ message: 'Hello API' });
 });
 

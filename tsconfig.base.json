@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org-react-node/employees": ["packages/employees/src/index.ts"]
+      "@org-react-node/employees": ["packages/employees/src/index.ts"],
+      "@org-react-node/shared-utils": ["packages/shared-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

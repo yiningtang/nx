@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { EmployeeList } from './EmployeeList'
 import fetchMock from 'jest-fetch-mock';
-import EMPLOYEES from './employees.mock.json';
+import { EMPLOYEES } from '@org-react-node/shared-utils';
 import { store } from '../../store';
 
 describe('', () => {

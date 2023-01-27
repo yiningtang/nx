@@ -1,7 +1,7 @@
 
-import { EmployeeState, Status } from './Employee.model'
+import { EmployeeState, Status } from '@org-react-node/shared-utils'
 import employeeReducer, { employeeAsyncThunk } from './employeeSlice'
-import EMPLOYEES from './employees.mock.json'
+import { EMPLOYEES } from '@org-react-node/shared-utils';
 import { waitFor } from '@testing-library/react'
 import fetchMock from 'jest-fetch-mock'
 import { store } from '../../store'

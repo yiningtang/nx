@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { Employee, Status } from './Employee.model'
+import { Employee, Status } from '@org-react-node/shared-utils'
 import { employeeAsyncThunk, selectEmployeesState } from './employeeSlice'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'

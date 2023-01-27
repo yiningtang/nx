@@ -1,6 +1,6 @@
+import { Employee, EmployeeState, Status } from '@org-react-node/shared-utils';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../store';
-import { Employee, EmployeeState, Status } from './Employee.model'
 
 export const initialState: EmployeeState = {
   employees: [],
@@ -20,8 +20,6 @@ export const employeeAsyncThunk = createAsyncThunk('employee/loadEmployees', asy
   } catch (error: unknown) {
     throw new Error('unexpected error')
   }
-
-  //  return await new Promise<Employee[]>((res)=> setTimeout(() => res(EMPLOYEES), 2000))
 })
 
 export const employeeSlice = createSlice({

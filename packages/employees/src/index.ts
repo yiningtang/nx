@@ -1,2 +1,3 @@
-import EMPLOYEES from './app/feature/employee/employees.mock.json';
-export default EMPLOYEES;
+import { EmployeeList } from "./app/feature/employee/EmployeeList";
+
+export default EmployeeList;
