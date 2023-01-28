@@ -1,5 +1,5 @@
 import express from 'express';
-import { Request, Response } from "express";
+/* import { Request, Response } from "express";
 const cors = require('cors');
 const port = process.env.PORT ? Number(process.env.PORT) : 3001;
 import { EMPLOYEES } from '@org-react-node/shared-utils';
@@ -18,3 +18,10 @@ app.use("/employees", (req_:Request, res: Response) => {
 app.listen(port, () => {
   console.log(`[ ready ] http://localhost:${port}`);
 });
+*/
+
+import App from './app/app';
+
+const app = new App();
+app.runServer();
+app.listen();
