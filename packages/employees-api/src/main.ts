@@ -1,4 +1,5 @@
 import express from 'express';
+import routes from './app/routes/index';
 /* import { Request, Response } from "express";
 const cors = require('cors');
 const port = process.env.PORT ? Number(process.env.PORT) : 3001;
@@ -22,6 +23,6 @@ app.listen(port, () => {
 
 import App from './app/app';
 
-const app = new App();
+const app = new App(routes);
 app.runServer();
 app.listen();

@@ -1,8 +1,7 @@
-import cors from 'cors';
 import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
 import { Router } from 'express';
-import { employeesController } from './controllers/employees.controller';
-import { mainController } from './controllers/main.controller';
 import EmployeesRoutes from './routes/employees.routes';
 
 class App {
@@ -12,22 +11,23 @@ class App {
   public router = Router();
   public cors = cors();
   public employeesRoutes = new EmployeesRoutes()
-  protected initialiseRoutes;
-  constructor() {
+  public initialiseRoutes: Router[];
+  constructor(routes: Router[]) {
     this.app = express();
     this.env = process.env.NODE_ENV || 'dev';
     this.port = process.env.PORT || 3001;
-    this.initialiseRoutes = this.employeesRoutes.getRoutes()
+    this.initialiseRoutes = routes || [];
   }
 
   private initialMiddleWares() {
     this.app.use(cors());
+    this.app.use(helmet());
   }
 
 
   private setUpRoutes() {
     this.initialiseRoutes.forEach((route) => {
-        this.app.use(route.path, route.config);
+        this.app.use(route);
       });
   }
 
